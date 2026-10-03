@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natarajan M | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: navy;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 50px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        h1, h2 {
+            color: blue;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        /* Home - CSS Grid */
+        #home {
+            min-height: 400px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #home h1 {
+            font-size: 40px;
+            animation: move 2s ease-in-out;
+        }
+
+        #home h2 {
+            color: yellow;
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid blue;
+            filter: grayscale(30%);
+            transition: 0.5s;
+        }
+
+        .profile-img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* Animation */
+        @keyframes move {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* About */
+        .box {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background-color: navy;
+            transform: translateY(-5px);
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: navy;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: blue;
+            transform: scale(1.05);
+        }
+
+        /* Projects and Details */
+        .detail {
+            background-color: black;
+            padding: 20px;
+            border-left: 4px solid blue;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .detail:hover {
+            transform: translateX(8px);
+            background-color: navy;
+        }
+
+        /* Contact */
+        #contact a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            color: blue;
+        }
+
+        /* Footer */
+        footer {
+            background-color: navy;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            #home {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-img {
+                margin: auto;
+            }
+
+            .grid-container,
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            #home h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#internship">Internship</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div>
+            <h1>Hi, I'm Natarajan M</h1>
+            <h2>MCA Student</h2>
+            <p>Welcome to My Portfolio</p>
+            <p>I am interested in learning new technologies.</p>
+        </div>
+
+        <img src="profile.jpg"
+             alt="Natarajan Profile Picture"
+             class="profile-img">
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="box">
+            <p>
+                I am currently pursuing MCA.
+                I have completed my BCA.
+                I am interested in learning new technologies
+                and improving my technical skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="grid-container">
+            <div class="detail">
+                <h3>MCA</h3>
+                <p>Currently Pursuing</p>
+            </div>
+
+            <div class="detail">
+                <h3>BCA</h3>
+                <p>Karpagam Academy</p>
+                <p>Percentage: 90%</p>
+            </div>
+
+            <div class="detail">
+                <h3>HSC</h3>
+                <p>Percentage: 56%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">MS Excel</div>
+            <div class="skill">Tally ERP 9</div>
+            <div class="skill">DTP</div>
+            <div class="skill">CorelDRAW</div>
+            <div class="skill">Communication</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Project</h2>
+
+        <div class="detail">
+            <h3>Route Mapping</h3>
+            <p>
+                This project is based on route mapping
+                and finding routes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internship">
+        <h2>Internship</h2>
+
+        <div class="detail">
+            <h3>Introduction to Machine Learning Using Python</h3>
+            <p>Narpavi Technologies, Chennai</p>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+
+        <div class="detail">
+            <p>Python Programming</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2>Achievements</h2>
+
+        <div class="grid-container">
+            <div class="detail">
+                <h3>Football</h3>
+                <p>State Level Football Runners</p>
+            </div>
+
+            <div class="detail">
+                <h3>Cricket</h3>
+                <p>Inter State Cricket Winner</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div class="box">
+            <p>
+                Email:
+                <a href="mailto:muatraj95@gmail.com">
+                    muatraj95@gmail.com
+                </a>
+            </p>
+
+            <p>Phone: 9360616972</p>
+            <p>Location: Palani, Tamil Nadu</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>My Portfolio | 2026</p>
+    </footer>
+
+</body>
+</html>
